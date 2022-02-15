@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #a1e2a4;
+}
+
+.wrapper {
+    text-align: center;
+    width: 380px;
+    padding: 50px 40px 50px 40px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.wrapper form{
+    margin: 45px 0;
+}
+
+form .field .input-area{
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    padding: 0 40px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #979595;
+    border-bottom-width: 3px;
+    outline: none;
+}
+
+form .field.error input{
+    border-color: #880904;
+}
+
+form input::placeholder{
+    color: #979595;
+    font-size: 18px;
+}
+
+.wrapper header{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+form .field{
+    width: 100%;
+    margin-bottom: 20px;
+}
+form .field.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100%{
+        margin-left: 0;
+    }
+    20%, 80%{
+        margin-left: -10px;
+    }
+    40%, 60%{
+        margin-left: 10px;
+    }
+}
+
+form .field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form .field .icon{
+    left: 15px;
+    color: #979595;
+}
+
+form .field .error-icon{
+    right: 10px;
+    color: #880904;
+}
+
+form .field .error-txt{
+    margin: 7px;
+    color: #880904;
+    text-align: left;
+}
+
+form .field .error{
+    display:  none;
+}
+
+form .field.error .error{
+    display: block;
+}
+
+form .pass-link{
+    text-align: left;
+    margin-top: -5px;
+}
+
+.wrapper a{
+    text-decoration: none;
+    color: #48aa4d;
+
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+
+form input[type="submit"]{
+    border: none;
+    margin-top: 25px;
+    background: #70d675;
+    cursor: pointer;
+    transition: background 0.2 ease;
+}
+
+form input[type="submit"]:hover{
+    background: #48aa4d;
+}
